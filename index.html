@@ -1,8 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Hello World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRISM Tech PH</title>
+  <link rel="icon" type="image/png" href="image/prismtechph-icon.png">
+  <link rel="stylesheet" href="style-index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
 </head>
 <body>
-    <h1>Hello World - STAGE</h1>
+<!-- Matrix Background -->
+  <canvas id="matrix"></canvas>
+<!-- Splash Screen -->
+  <section class="page_home">
+    <img src="image/prismtechph-nav_icon.png" 
+         alt="PRISM Tech Neon Logo" 
+         class="logo" id="logo">
+  </section>
+
+  <script src="index.js" defer></script>
+  <script src="matrix.js"></script>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="sounds/matrix-theme.mp3" type="audio/mpeg">
+  </audio>
+
 </body>
 </html>
