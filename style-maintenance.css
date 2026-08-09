@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background:black;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+/* Logo Section */
+.logo {
+  max-width: 450px;
+  animation: logo-glow 2s infinite ease-in-out;
+}
+
+/* Maintenance Message */
+.maintenance {
+  font-size: 40px;
+}
+
+h1 {
+  margin-bottom: 0.5em;
+  color: #ffcc00;
+}
+
+p {
+  color: #ccc;
+}
+
+/* Loader */
+.loader {
+  margin: 30px auto;
+  border: 8px solid #333;
+  border-top: 8px solid #00c896;
+  border-right: 8px solid #6a0dad;
+  border-bottom: 8px solid #007bff;
+  border-radius: 50%;
+  width:70px;
+  height: 70px;
+  animation: spin 1.5s linear infinite;
+  padding: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
