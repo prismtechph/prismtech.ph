@@ -9,13 +9,14 @@ html, body {
 
 /* Logo Section */
 .logo {
-  max-width: 450px;
-  animation: logo-glow 2s infinite ease-in-out;
+  max-width: 500px;
+  align-items: center;
 }
 
 /* Maintenance Message */
 .maintenance {
   font-size: 40px;
+  margin-top: 100px
 }
 
 h1 {
@@ -25,23 +26,4 @@ h1 {
 
 p {
   color: #ccc;
-}
-
-/* Loader */
-/* .loader {
-  margin: 30px auto;
-  border: 8px solid #333;
-  border-top: 8px solid #00c896;
-  border-right: 8px solid #6a0dad;
-  border-bottom: 8px solid #007bff;
-  border-radius: 50%;
-  width:70px;
-  height: 70px;
-  animation: spin 1.5s linear infinite;
-  padding: 20px;
-} */
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
