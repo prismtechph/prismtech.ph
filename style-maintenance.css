@@ -1,4 +1,3 @@
-/* Base styles */
 html, body {
   height: 100%;
   margin: 0;
@@ -17,7 +16,6 @@ html, body {
   animation: moveUp 1s ease-out forwards;
   margin-top: -60px;
 }
-
 @keyframes moveUp {
   from { top: 40px; opacity: 0; }
   to   { top: 0; opacity: 1; }
