@@ -12,7 +12,6 @@ fetch("pages/footer.html")
     document.getElementById("footer").innerHTML = data;
   });
 
-// Function for dynamic sections
 function loadSection(file) {
   fetch(file)
     .then(res => res.text())

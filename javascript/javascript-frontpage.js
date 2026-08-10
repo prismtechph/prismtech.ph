@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(() => {
       window.location.href = "home.html";
-    }, 1000); // matches fade duration
+    }, 1000);
   });
 });
 
@@ -28,6 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Redirect after delay
     setTimeout(() => {
       window.location.href = "home.html";
-    }, 1500); // slightly longer to show overlay
+    }, 1500);
   });
 });

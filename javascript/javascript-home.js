@@ -1,7 +1,7 @@
 // Fade-in Effects to Main Page Script
 
   document.addEventListener("DOMContentLoaded", () => {
-    // Trigger fade-in once page is ready
+    
     document.body.classList.add("fade-in");
   });
 
