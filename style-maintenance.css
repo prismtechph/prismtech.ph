@@ -16,11 +16,13 @@ html, body {
   animation: moveUp 1s ease-out forwards;
   margin-top: -60px;
 }
+
 @keyframes moveUp {
   from { top: 40px; opacity: 0; }
   to   { top: 0; opacity: 1; }
 }
 
+/* Maintenance Message */
 .maintenance {
   font-size: 40px;
   margin-top: 60px;
