@@ -1,0 +1,133 @@
+.blank-section {
+  min-height: 450px;
+  background-color: whitesmoke;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: 1.2rem;
+  font-family: JetBrains Mono, monospace;
+}
+
+/* ---------------- Navbar ---------------- */
+.navbar {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+/* Rotating logo */
+.nav_logo {
+  max-width: 60px;
+  animation: spin-horizontal 3s linear infinite;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  padding: 0px 20px;
+}
+
+@keyframes spin-horizontal {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  position: relative;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  transition: color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect — subtle glow box */
+.nav-links a:hover {
+  color: rgb(56, 56, 56);
+  border: 1px solid #ffffff; /* box outline */
+  box-shadow: 0 0 6px rgba(255,255,255,0.6); /* ✅ small white glow */
+}
+
+.nav-links a.active {
+  color: #ffffff;
+  font-weight: 600;
+  border: 1px solid #ffffff; /* active box visible */
+  box-shadow: 0 0 8px rgba(255,255,255,0.8); /* slightly stronger glow */
+}
+
+/* ---------------- Footer ---------------- */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 1px;
+  position: relative;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.4);
+  font-family:'Courier New', Courier, monospace
+}
+
+.icon-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.icon-nav a {
+  font-size: 1.2rem; /* bigger emoji size */
+  text-decoration: none;
+  color: #00FF00; /* Matrix green */
+  transition: all 0.3s ease;
+}
+.icon-nav a:hover {
+  color: white;
+  text-shadow: 
+    0 0 6px white,
+    0 0 10px white,
+    0 0 14px white;
+  transform: scale(1.2);
+}
+.icon-nav a.active {
+  color: white;
+  text-shadow: 0 0 8px white;
+}
+
+
+/* ---------------- Responsive behavior for smaller screens ---------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .nav-links a {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }
+}

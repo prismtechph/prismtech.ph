@@ -1,0 +1,33 @@
+/root
+  ├── index.html          ← front page
+  ├── home.html           ← main site container
+  ├── /pages
+  │     ├── navbar.html
+  │     ├── about.html
+  │     ├── services.html
+  │     └── contact.html
+  ├── /css
+  │     └── style-home.css
+  ├── /javascipt
+  │     ├── matrix.js
+  │     └── fetch.js
+  ├── /image
+      └── prismtechph-icon.png
+
+
+/css → styles (style-home.css, style-index.css)
+
+/image → all your logos/icons
+
+/javascript → multiple scripts (fetch, home, index, matrix)
+
+/pages → modular HTML snippets (navbar.html, maintenance.html, thankyou.html)
+
+/php → send mail
+
+==================================================================================================
+Workflow
+index.html → splash screen with Matrix + logo.
+Clicking logo → redirects to home.html.
+home.html → automatically fetches navbar.html and footer.html.
+Navbar links → call loadSection() to fetch About, Services, Contact into <main id="content">.
