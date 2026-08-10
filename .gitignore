@@ -1,0 +1,3 @@
+# Ignore prod-only maintenance files
+page/maintenance.html
+javascript/maintenance.js
