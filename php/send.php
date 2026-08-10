@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "💬 Message:\n$message\n";
 
     if (mail($to, $subject, $body, $headers)) {
-        header("Location: thankyou.html"); // Redirect to thank-you page
+        header("Location: ../page/thankyou.html"); // Redirect to thank-you page
         exit();
     } else {
         echo "Error sending message.";

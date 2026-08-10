@@ -1,24 +1,12 @@
-// index.html Style Script
-document.addEventListener("DOMContentLoaded", () => {
-  const logo = document.getElementById("logo");
-
-  logo.addEventListener("click", () => {
-    // Fade out effect before redirect
-    document.body.style.transition = "opacity 1s ease-out";
-    document.body.style.opacity = "0";
-
-    setTimeout(() => {
-      window.location.href = "home.html";
-    }, 1000);
-  });
-});
-
+// frontpage.js
 document.addEventListener("DOMContentLoaded", () => {
   const logo = document.getElementById("logo");
   const overlay = document.getElementById("loading-overlay");
 
+  // Toggle target here: "maintenance.html" or "home.html"
+  const redirectTarget = "home.html"; 
+
   logo.addEventListener("click", () => {
-    // Show overlay
     overlay.classList.add("show");
 
     // Fade out body
@@ -27,7 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Redirect after delay
     setTimeout(() => {
-      window.location.href = "home.html";
+      window.location.href = redirectTarget;
     }, 1500);
   });
+});
+
+document.querySelector("#start-button").addEventListener("click", function(e) {
+  e.preventDefault();
+  document.body.classList.add("fade-out");
+  setTimeout(() => {
+    window.location.href = "home.html";
+  }, 800); // matches fadeOut duration
 });

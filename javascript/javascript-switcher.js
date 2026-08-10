@@ -11,7 +11,7 @@ fetch('config.json', { cache: "no-store" })
     }
     // If both false → maintenance (fail-safe)
     else {
-      window.location.href = "maintenance.html";
+      window.location.href = "home.html";
     }
   })
   .catch(() => window.location.href = "maintenance.html"); // fallback

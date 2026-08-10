@@ -1,0 +1,45 @@
+/* ---------------- Footer ---------------- */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  position: relative;
+  font-family:'Courier New', Courier, monospace;
+  line-height: 1.5;
+}
+
+/* ---------------- Floating Icons ---------------- */
+/* ---------------- Floating Nav ---------------- */
+.floating-nav {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  background: rgba(0,0,0,0.9);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  z-index: 2000;
+}
+
+.floating-nav a {
+  font-size: 1.4rem;
+  color: #00FF00;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.floating-nav a:hover {
+  color: #fff;
+  transform: scale(1.2);
+  text-shadow: 0 0 6px #fff;
+}
+
+.floating-nav a.active {
+  color: #fff;
+  text-shadow: 0 0 8px #00FF00;
+}

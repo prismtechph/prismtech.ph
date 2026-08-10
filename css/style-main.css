@@ -1,0 +1,316 @@
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.page_home {
+  min-height: 100vh;          /* full height hero */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;       /* ✅ white background */
+  color: #000;
+  text-align: center;
+}
+
+.title-card {
+  display: flex;
+  flex-direction: column; /* ✅ stack title above logo */
+  align-items: center;
+  position: relative;
+}
+
+.home-title {
+  position: relative;
+  z-index: 2;             /* ✅ ensures text sits above logo */
+  margin-bottom: -60px;   /* ✅ pulls text down to overlap logo */
+}
+
+.home-title h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;   /* ✅ tighter line spacing */
+  margin-bottom: 5px; /* ✅ smaller gap below the name */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.home-title .tagline {
+  font-size: 1.4rem;
+  font-style: italic;
+  color: grey;
+  margin-top: 0;      /* ✅ no extra gap above tagline */
+}
+
+
+.home-title sup {
+  font-size: 0.4em;
+  vertical-align: text-top;
+}
+
+.home-logo {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  max-width: 350px;
+  transition: transform 0.8s ease;
+}
+
+.logo:hover {
+  transform: scale(1.5);
+}
+
+/* ---------------- Overview Section ---------------- */
+.overview {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.card {
+  flex: 1;
+  min-width: 280px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #000; /* deep blue highlight */
+}
+
+.card p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #555;
+  font-style: italic;
+}
+
+/* ✅ Hover animation */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* ✅ Highlight active card (Mission or Vision when hovered/clicked) */
+.card.active {
+  border: 2px solid #191970;
+  background: #f0f8ff;
+}
+
+
+/* ---------------- Services Section ---------------- */
+.services {
+  padding: 60px 20px;
+  text-align: center;   /* ✅ centers the heading */
+  background-color: #fff;
+  color: #333;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;   /* ✅ ensures heading is centered */
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.service-card {
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+   text-align: left;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #000;
+   text-align: center;
+}
+
+.service-details {
+  display: none;
+  margin-top: 15px;
+}
+
+.service-card.active .service-details {
+  display: block;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* ✅ Highlight active card */
+.service-card.active {
+  border: 2px solid #191970;   /* deep blue highlight */
+  background: #f0f8ff;         /* subtle light blue background */
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* ---------------- Contact Section ---------------- */
+.info-section {
+  background: whitesmoke;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Shared box style */
+.info-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  min-width: 280px;
+}
+
+/* Who We Are (bigger) */
+.who-we-are {
+  flex: 2;              /* ✅ takes up twice the space */
+  max-width: 700px;     /* wider limit */
+  color: #333;
+  text-align: center;
+}
+
+.who-we-are h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.who-we-are p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Contact Us */
+.info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;          /* space between the two cards */
+  padding: 20px 20px;
+  flex-wrap: wrap;    /* ✅ stacks vertically on mobile */
+  background: #f9f9f9;
+}
+
+.info-box {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-us {
+  flex: 1;              /* ✅ smaller portion */
+  max-width: 400px;
+  text-align: center;
+  color: #333;
+  text-align: left;
+}
+
+.contact-us h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f9f9f9;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+
+.contact-info {
+  text-align: center;
+  color: #333;
+}
+
+.contact-info p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.contact-info a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #000;
+}
