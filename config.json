@@ -1,4 +1,4 @@
 {
-  "maintenance": true,
-  "frontpage": false
+  "maintenance": false,
+  "frontpage": true
 }
