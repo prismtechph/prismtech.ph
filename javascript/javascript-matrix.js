@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const text = chars.charAt(Math.floor(Math.random() * chars.length));
       ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-      // Reset immediately when reaching bottom
       if (drops[i] * fontSize > canvas.height) {
         drops[i] = 0;
       }

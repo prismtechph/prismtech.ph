@@ -109,7 +109,6 @@ footer {
   text-shadow: 0 0 8px white;
 }
 
-
 /* ---------------- Responsive behavior for smaller screens ---------------- */
 @media (max-width: 768px) {
   .navbar {
