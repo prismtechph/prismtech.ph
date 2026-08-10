@@ -1,9 +1,13 @@
-// ---------------- Maintenance Mode ----------------
-fetch('../config.json')
+// javascript/maintenance.js
+fetch('config.json')
   .then(res => res.json())
   .then(cfg => {
     if (cfg.maintenance) {
-      window.location.href = "../page/maintenance.html";
+      // Redirect to maintenance page
+      window.location.href = "pages/maintenance.html";
+    } else {
+      // Redirect to live site
+      window.location.href = "home.html";
     }
   })
-  .catch(err => console.error("Config missing, defaulting to live site.", err));
+  .catch(err => console.error("Config not found, defaulting to live site.", err));

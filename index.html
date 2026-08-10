@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=maintenance.html">
-  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRISM Tech PH</title>
+  <link rel="icon" type="image/png" href="image/prismtechph-icon.png">
+  <link rel="stylesheet" href="css/style-maintenance.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Maintenance toggle script -->
+  <script src="javascript/maintenance.js"></script>
 </head>
 <body>
-  <p>If you are not redirected, <a href="maintenance.html">click here</a>.
-  </p>
-</body>
+  <!-- Front page visuals -->
+  <canvas id="matrix"></canvas>
+  <section class="page_home">
+    <img src="image/prismtechph-nav_icon.png" alt="PRISM Tech Neon Logo" class="logo" id="logo">
+  </section>
+  <div id="loading-overlay">
+    <div class="loading-text">Initializing PRISM Tech PH...</div>
+  </div>
 
-<script src="javascript/maintenance.js"></script>
+  <!-- Normal scripts -->
+  <script src="javascript/javascript-matrix.js"></script>
+</body>
 </html>
