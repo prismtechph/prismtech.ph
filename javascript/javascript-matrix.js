@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  const chars = '&WENDELLPRINCIPE&GREGGYRAMOS&PRISMTECHPH&';
+  const chars = '&WENDELLPRINCIPE*GREGGYRAMOS%PRISMTECHPH!';
   // const chars = '🌸🌐';
   const fontSize = 24;
   let columns = Math.floor(canvas.width / fontSize);
   const drops = Array(columns).fill(1);
 
   // Wider speed range for natural variation
-  let speeds = Array(columns).fill().map(() => Math.random() * .5 + 0.2);
+  let speeds = Array(columns).fill().map(() => Math.random() * 1.2 + 0.3);
 
   function draw() {
     ctx.fillStyle = 'rgba(0,0,0,0.05)';

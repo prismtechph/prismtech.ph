@@ -1,0 +1,6 @@
+# Ignore prod-only maintenance files in staging
+config.json
+maintenance.html
+css/style-maintenance.css
+javascript/javascript-maintenance.js
+javascript/javascript-switcher.js

@@ -1,12 +1,19 @@
 // Load navbar
-fetch("pages/navbar.html")
+fetch("page/navbar.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("navbar").innerHTML = data;
   });
 
+// Load main content
+fetch("page/maincontent.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("content").innerHTML = data;
+  });
+
 // Load footer
-fetch("pages/footer.html")
+fetch("page/footer.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("footer").innerHTML = data;

@@ -1,7 +1,8 @@
 html, body {
   height: 100%;
   margin: 0;
-  background: transparent;
+/*  background: transparent; */
+    background: black;
   overflow: hidden;
 }
 
@@ -26,6 +27,7 @@ html, body {
 
 /* Logo styling */
 .logo {
+  width: 20vw;
   max-width: 250px;
   animation: pulse-glow 2s infinite ease-in-out;
   cursor: pointer;
@@ -86,4 +88,13 @@ html, body {
 #loading-overlay.show {
   opacity: 1;
   pointer-events: auto; /* ✅ overlay only blocks when active */
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
