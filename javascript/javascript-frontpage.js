@@ -2,28 +2,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   const logo = document.getElementById("logo");
   const overlay = document.getElementById("loading-overlay");
+  const redirectTarget = "home.html";
 
-  // Toggle target here: "maintenance.html" or "home.html"
-  const redirectTarget = "home.html"; 
+  // Show overlay immediately (dim background)
+  overlay.classList.add("show");
 
-  logo.addEventListener("click", () => {
-    overlay.classList.add("show");
+  // Redirect after logo flip animation ends
+  logo.addEventListener("animationend", (event) => {
+    if (event.animationName === "flipLogo") {
+      // Fade out overlay
+      overlay.style.opacity = 0;
 
-    // Fade out body
-    document.body.style.transition = "opacity 1s ease-out";
-    document.body.style.opacity = "0";
-
-    // Redirect after delay
-    setTimeout(() => {
-      window.location.href = redirectTarget;
-    }, 1500);
+      // Redirect after fade-out completes
+      setTimeout(() => {
+        window.location.href = redirectTarget;
+      }, 500);
+    }
   });
-});
-
-document.querySelector("#start-button").addEventListener("click", function(e) {
-  e.preventDefault();
-  document.body.classList.add("fade-out");
-  setTimeout(() => {
-    window.location.href = "home.html";
-  }, 800); // matches fadeOut duration
 });

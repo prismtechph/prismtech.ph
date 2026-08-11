@@ -30,7 +30,7 @@ document.addEventListener("click", (e) => {
   if (!card) return;
 
   // Close all other cards
-  document.querySelectorAll(".service-card").forEach(c => {
+  document.querySelectorAll(".service-card.active").forEach(c => {
     if (c !== card) c.classList.remove("active");
   });
 

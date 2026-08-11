@@ -80,14 +80,17 @@
 
   .nav-links {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;          /* ✅ prevent wrapping */
     justify-content: center;
     gap: 10px;
     margin-top: 15px;
+    overflow-x: auto;           /* ✅ allow horizontal scroll if too small */
+    white-space: nowrap;        /* ✅ keep items in one line */
   }
 
   .nav-links a {
     padding: 6px 10px;
     font-size: 0.95rem;
+    flex-shrink: 0;             /* ✅ stops items from shrinking too much */
   }
 }
